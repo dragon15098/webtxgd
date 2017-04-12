@@ -42,9 +42,18 @@ def login_web():
             return redirect(url_for("login_web"))
 
 
-@app.route('/sign_up')
-def sign_up():
-    return  render_template('sign_up.html')
+@app.route('/sign_up', methods=["GET", "POST"])
+def sign_up_web():
+    if request.method == "GET":
+        return render_template("sign_up.html")
+    elif request.method == "POST":
+        user = User.objects(username=request.form["username"]).first()
+        if not user:
+            new_user = User()
+            new_user.username = request.form["username"]
+            new_user.password = request.form["password"]
+            new_user.save()
+
 
 @app.route('/boy_page')
 def boy_page():
