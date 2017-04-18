@@ -1,27 +1,23 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Update info</title>
+    <title>Girl</title>
     <link rel="shortcut icon" href="http://i.imgur.com/CKJcV9q.jpg">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../static/login.css">
 </head>
-<body>
+<body style="background-color: #fae0ff">
 <div class="w3-container w3-margin-auto" style="width: 50%;height: 50%;margin: auto">
-    <form style="border:1px solid #ccc" method="post" enctype="multipart/form-data">
+    <form style="border:none">
         <div class="imgcontainer">
-            <img src="{{ image }}" alt="Avatar" style="width: 90%">
+            <img src="{{ image }}" alt="Avatar" style= width:90%>
         </div>
         <div class="container">
-            <label><b>New Description</b></label>
-            <input type="text" placeholder="{{ description }}" name="description" required>
-
-            <label><b>Images</b></label>
-            <input type="file" accept="image/*" name="source">
+            <label><b>Description: {{ description }}</b></label>
 
             <div class="clearfix" style="margin: 5px">
-                <input type="submit" class="w3-btn" style="background-color: #b2ccf4" value="Submit">
+                <a href="/girl_page" type="submit" class="w3-btn" style="background-color: #b2d7ff">Next</a>
             </div>
         </div>
     </form>
