@@ -105,7 +105,7 @@ def sign_up_web():
 
 
 @app.route('/boy_page')
-@login_required
+
 def boy_page():
     num = Number.objects(name="abc").first()
     temp = random.randint(1, num.numberboy+1)
