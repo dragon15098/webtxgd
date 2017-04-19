@@ -105,6 +105,7 @@ def sign_up_web():
 
 
 @app.route('/boy_page')
+@login_required
 def boy_page():
     num = Number.objects(name="abc").first()
     temp = random.randint(1, num.numberboy+1)
@@ -121,6 +122,7 @@ def girl_page():
 
 
 @app.route('/update', methods=["GET", "POST"])
+@login_required
 def update():
     user = User.objects(token=current_user.id).first()
     if (request.method == "GET"):
